@@ -1,3 +1,5 @@
+[![BuildStatus](https://travis-ci.org/tetuyoko/html-pipeline-bungo.svg?branch=master)](https://travis-ci.org/tetuyoko/html-pipeline-bungo)
+
 # Html::Pipeline::Bungo
 
 A html-pipeline filter that converts ruby and emphasis
