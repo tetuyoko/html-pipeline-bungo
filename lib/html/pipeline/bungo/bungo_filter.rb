@@ -19,7 +19,7 @@ module HTML
 
       def emph_dot_fliter(text)
         text.gsub(/:([^:]+?)\.\./) do |match|
-          "<em class='emphasis-dot'><span>#{$1}</span></em>"
+          "<span class='botenparent'><span class='boten'>#{$1}</span></span>"
         end
       end
 
