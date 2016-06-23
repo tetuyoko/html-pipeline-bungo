@@ -6,6 +6,7 @@ module HTML
         html = ruby_fliter(html)
         html = emph_dot_fliter(html)
         html = bold_fliter(html)
+        html.gsub!(/(\r\n|\r|\n)/, "\n\n")
         html.rstrip!
         html
       end
