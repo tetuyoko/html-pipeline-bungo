@@ -20,8 +20,8 @@ module HTML
 
       def emph_dot_fliter(text)
         text.gsub(/:([^:]+?)\.\./) do |match|
-          ww = $1.split(//).map{|s| "<span class='boten'>#{s}</span>"}
-          "<span class='botenparent'>#{ww.join}</span>"
+          literals = $1.split(//).map{|l| "<span class='boten'>#{s}</span>"}
+          "<span class='botenparent'>#{literals.join}</span>"
         end
       end
 
