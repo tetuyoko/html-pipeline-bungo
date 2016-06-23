@@ -26,10 +26,9 @@ module HTML
 
       def bold_fliter(text)
         text.gsub(/:([^:]+?)\!/) do |match|
-          "<em>#{$1}</em>"
+          "<b>#{$1}</b>"
         end
       end
-
     end
   end
 end
