@@ -5,6 +5,7 @@ module HTML
         html = @text
         html = ruby_fliter(html)
         html = emph_dot_fliter(html)
+        html = bold_fliter(html)
         html.rstrip!
         html
       end
@@ -20,6 +21,12 @@ module HTML
       def emph_dot_fliter(text)
         text.gsub(/:([^:]+?)\.\./) do |match|
           "<span class='botenparent'><span class='boten'>#{$1}</span></span>"
+        end
+      end
+
+      def bold_fliter(text)
+        text.gsub(/:([^:]+?)\!/) do |match|
+          "<em>#{$1}</em>"
         end
       end
 
