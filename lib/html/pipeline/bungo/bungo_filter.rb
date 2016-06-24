@@ -6,7 +6,7 @@ module HTML
         html = ruby_fliter(html)
         html = emph_dot_fliter(html)
         html = bold_fliter(html)
-        html.gsub!(/(\r\n|\r|\n)/, "\n\n")
+        html = paragraph_fliter(html)
         html.rstrip!
         html
       end
@@ -31,6 +31,11 @@ module HTML
           "<b>#{$1}</b>"
         end
       end
+
+      def paragraph_fliter(text)
+        "<p>#{text.gsub(/\r\n|\r|\n/, "</p><p>")}</p>"
+      end
+
     end
   end
 end
