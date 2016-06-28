@@ -18,5 +18,4 @@ class Html::Pipeline::BungoTest < Minitest::Test
     dest = "<p>hogehoge</p><p>hogehoge</p><p>hgoe</p><p></p><p></p>"
     assert_equal dest, HTML::Pipeline::BungoFilter.to_html(src)
   end
-
 end
