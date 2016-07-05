@@ -14,5 +14,6 @@ module Html
     autoload :ParagraphFilter, 'html/pipeline/bungo/paragraph_filter'
     autoload :RubyFilter, 'html/pipeline/bungo/ruby_filter'
     autoload :NowrapPlainTextFilter, 'html/pipeline/bungo/nowrap_plain_text_input_filter'
+    autoload :DashFilter, 'html/pipeline/bungo/dash_filter'
   end
 end
