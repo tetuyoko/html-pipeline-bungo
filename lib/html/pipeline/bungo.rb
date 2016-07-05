@@ -1,6 +1,7 @@
 require "html/pipeline"
 require "html/pipeline/bungo/version"
 require "html/pipeline/bungo/bold_filter.rb"
+require "html/pipeline/bungo/dash_filter.rb"
 require "html/pipeline/bungo/emph_filter.rb"
 require "html/pipeline/bungo/paragraph_filter.rb"
 require "html/pipeline/bungo/ruby_filter.rb"

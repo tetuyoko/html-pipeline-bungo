@@ -7,6 +7,7 @@ class Html::Pipeline::BungoTest < Minitest::Test
                    HTML::Pipeline::EmphFilter,
                    HTML::Pipeline::ParagraphFilter,
                    HTML::Pipeline::RubyFilter,
+                   HTML::Pipeline::DashFilter,
                  ]
    end
 
@@ -33,6 +34,14 @@ class Html::Pipeline::BungoTest < Minitest::Test
   def test_pararel_filter
     src = ":傍点..(ほげ)"
     dest = "<p><span class='botenparent'><span class='boten'>傍</span><span class='boten'>点</span></span>(ほげ)</p>"
+    doc = @pipeline.call(src)
+
+    assert_equal dest, doc[:output].to_s
+  end
+
+  def test_dash_filter
+    src = ":--"
+    dest = "<p><span class='dash'>――</span></p>"
     doc = @pipeline.call(src)
 
     assert_equal dest, doc[:output].to_s
