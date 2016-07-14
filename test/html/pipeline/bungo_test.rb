@@ -46,4 +46,14 @@ class Html::Pipeline::BungoTest < Minitest::Test
 
     assert_equal dest, doc[:output].to_s
   end
+
+  def test_one_stop
+    src = ":お.. :性せい).. :性せい)!.."
+    
+    dest =  "<p><span class='botenparent'><span class='boten'>お</span></span> :性せい).. :性せい)!..</p>"
+    doc = @pipeline.call(src)
+
+    assert_equal dest, doc[:output].to_s
+  end
+
 end

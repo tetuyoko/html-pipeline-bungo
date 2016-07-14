@@ -9,7 +9,7 @@ module HTML
       private
 
       def bold_filter(text)
-        text.gsub(/:([^:]+?)\!/) do |match|
+        text.gsub(/:([^:\(\)\!]+?)\!/) do |match|
           "<b>#{$1}</b>"
         end
       end

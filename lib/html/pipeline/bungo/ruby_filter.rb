@@ -9,7 +9,7 @@ module HTML
       private
 
       def ruby_filter(text)
-        text.gsub(/:([^:]+?)\(([^:]+?)\)/) do |match|
+        text.gsub(/:([^:\!\.]+?)\(([^:]+?)\)/) do |match|
           "<ruby><rb>#{$1}</rb><rp>(</rp><rt>#{$2}</rt><rp>)</rp></ruby>"
         end
       end
