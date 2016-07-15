@@ -9,7 +9,7 @@ module HTML
       private
 
       def emph_dot_filter(text)
-        text.gsub(/:([^:\(\)\!]+?)\|/) do |match|
+        text.gsub(/:([^:\(\)\|\!]+?)\|/) do |match|
           literals = $1.split(//).map{|lt| "<span class='boten'>#{lt}</span>"}
           "<span class='botenparent'>#{literals.join}</span>"
         end
