@@ -4,6 +4,13 @@
 
 A html-pipeline filter that converts ruby and emphasis
 
+小説用テキストを変換するhtml-pipelineの拡張
+対応
+ * ルビ
+ * 強調
+ * ダーシ
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
